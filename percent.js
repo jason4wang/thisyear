@@ -9,22 +9,22 @@ function getTotalDaysOfYear(year) {
 }
 
 // 获取今年已过天数
-function getDaysPassedOfYear() {
+function getSecondsPassedOfYear() {
   const now = new Date();
   const startOfYear = new Date(now.getFullYear(), 0, 1);
-  return Math.floor((now - startOfYear) / 86400000); 
+  return Math.floor((now - startOfYear) / 1000); 
 }
 
 // 计算今年过去的百分比
 function getPercentOfYearPassed() {
   
-  const totalDays = getTotalDaysOfYear(new Date().getFullYear());  
-  const daysPassed = getDaysPassedOfYear();
+  const totalSeconds = getTotalDaysOfYear(new Date().getFullYear()) * (24*3600);  
+  const secondsPassed = getSecondsPassedOfYear();
   
-  const decimalDigits = 6;
-  const percent = (daysPassed / totalDays * 100).toFixed(decimalDigits);
+  const decimalDigits = 8;
+  const percent = (secondsPassed / totalSeconds * 100).toFixed(decimalDigits);
 
-  return percent;
+  return percent + "%";
 }
 
 // 每秒调用一次更新
