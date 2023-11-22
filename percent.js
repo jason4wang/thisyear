@@ -12,7 +12,7 @@ function getTotalDaysOfYear(year) {
 function getDaysPassedOfYear() {
   const now = new Date();
   const startOfYear = new Date(now.getFullYear(), 0, 1);
-  return Math.floor((now - startOfYear) / 86400000); 
+  return Math.floor(now - startOfYear); 
 }
 
 // 计算今年过去的百分比
