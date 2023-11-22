@@ -16,7 +16,7 @@ function isLeapYear(year) {
     const days = getDaysOfThisYear();
     const totalDays = isLeapYear(new Date().getFullYear()) ? 366 : 365;
     const percent = days / totalDays * 100;
-    return percent.toFixed(2); 
+    return percent.toFixed(8); 
   }
   
   // 调用函数并输出
