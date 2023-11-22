@@ -8,7 +8,7 @@ function isLeapYear(year) {
     const now = new Date();
     const thisYear = new Date(now.getFullYear(), 0, 1);
     const diff = now - thisYear;
-    return Math.floor(diff / 1000 / 60 / 60 / 24);
+    return Math.floor(diff);
   }
   
   // 计算百分比
